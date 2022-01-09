@@ -5,7 +5,10 @@ ARG GAME_ARGS
 
 WORKDIR site
 RUN wget https://js-dos.com/6.22/current/js-dos.js && \
+    wget https://js-dos.com/6.22/current/wdosbox.js && \
+    wget https://js-dos.com/6.22/current/wdosbox.wasm.js && \
     wget -O game.zip "$GAME_URL"
+    
 
 RUN apk add darkhttpd
 
